@@ -57,9 +57,9 @@ export interface IInventoryService {
   ): Promise<ReservationItemDTO[]>
 
   createInventoryItem(
-    input: CreateInventoryItemInput,
+    input: CreateInventoryItemInput | CreateInventoryItemInput[],
     context?: SharedContext
-  ): Promise<InventoryItemDTO>
+  ): Promise<InventoryItemDTO[]>
 
   createInventoryLevel(
     data: CreateInventoryLevelInput | CreateInventoryLevelInput[],
